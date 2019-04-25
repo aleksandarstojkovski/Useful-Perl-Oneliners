@@ -35,3 +35,11 @@ Output    :   B
 Command   :   perl -lane 'print "TRUE" if $F[0]=~/\d/ and $F[1]=~/\D/'
 Example   :   echo "3 z" | perl -lane 'print "TRUE" if $F[0]=~/\d/ and $F[1]=~/\D/'
 Output    :   TRUE
+
+##########################################################
+# sobstitute match in file
+##########################################################
+
+# -pi.orig will create a backup of the file with ".orig" at the end
+Command   :   perl -pi.orig -e 's/(REGEX_HERE)/(VALUE_HERE)/' (PATH_TO_FILE)
+
