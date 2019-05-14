@@ -1,8 +1,14 @@
 ##########################################################
+# first occurrence of regular expression
+##########################################################
+
+Command   :   perl -ne 'print $1 if /(REGEX_HERE)/ and exit'
+
+##########################################################
 # last occurrence of regular expression
 ##########################################################
 
-Command   :   perl -n -e '$e = $1 if /(REGEX_HERE)/;  END{ print $e }'
+Command   :   perl -ne '$e = $1 if /(REGEX_HERE)/;  END{ print $e }'
 
 ##########################################################
 # print something if regex matches
