@@ -2,7 +2,7 @@
 # first occurrence of regular expression
 ##########################################################
 
-Command   :   perl -ne 'print $1 if /(REGEX_HERE)/ and exit'
+Command   :   perl -ne 'print "$1" and exit if /(REGEX_HERE)/'
 
 ##########################################################
 # last occurrence of regular expression
