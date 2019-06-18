@@ -1,17 +1,14 @@
 # Usefull_Perl_Oneliners
 
-##########################################################
-# first occurrence of regular expression
-##########################################################
+## First occurrence of regular expression
 ```
 Command   :   perl -ne 'print "$1" and exit if /(REGEX_HERE)/'
 ```
 
-##########################################################
-# last occurrence of regular expression
-##########################################################
-
+## last occurrence of regular expression
+```
 Command   :   perl -ne '$e = $1 if /(REGEX_HERE)/;  END{ print $e }'
+```
 
 ##########################################################
 # print something if regex matches
