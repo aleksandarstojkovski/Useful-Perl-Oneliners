@@ -1,4 +1,5 @@
 # Usefull Perl Oneliners
+Very usefull Perl one liners, designed to be used inside shell scripts.
 
 ## First occurrence of regular expression
 
