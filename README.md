@@ -45,8 +45,7 @@ Output    :   TRUE
 ```
 
 ## Sobstitute match in file
-
+-pi.orig will create a backup of the file with ".orig" at the end
 ```
-# -pi.orig will create a backup of the file with ".orig" at the end
 Command   :   perl -pi.orig -e 's/(REGEX_HERE)/(VALUE_HERE)/' (PATH_TO_FILE)
 ```
