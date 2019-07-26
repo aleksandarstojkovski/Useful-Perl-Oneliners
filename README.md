@@ -1,4 +1,4 @@
-# Usefull Perl Oneliners
+# Useful Perl Oneliners
 Very usefull Perl one liners, designed to be used inside shell scripts.
 
 
