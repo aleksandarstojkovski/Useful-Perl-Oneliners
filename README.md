@@ -51,3 +51,9 @@ Output    :   TRUE
 ```
 Command   :   perl -pi.orig -e 's/(REGEX_HERE)/(VALUE_HERE)/' (PATH_TO_FILE)
 ```
+
+### Check syntax of file (parse)
+File format must be KEY;VALUE
+```
+Command   :   perl -ne '$exit_code='0' ; $exit_code='1' if $_ !~ /.*?\s;\s.*/ ; print "1" and exit if $exit_code' (PATH_TO_FILE)
+```
