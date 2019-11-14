@@ -57,3 +57,19 @@ eg. in this case file format must be KEY;VALUE
 ```
 Command   :   perl -ne '$exit_code='0' ; $exit_code='1' if $_ !~ /.*?\s;\s.*/ ; print "1" and exit if $exit_code' (PATH_TO_FILE)
 ```
+
+### Substitute multiple placeholders with one single one liner
+File: example_config_file.txt (with placeholders)
+```
+<VirtualHost *:##VHOST_PORT##>
+    DocumentRoot ##DOCUMENT_ROOT##
+    ServerName ##SERVER_NAME##
+</VirtualHost>
+```
+File: script.sh
+```
+export VHOST_PORT="80"
+export DOCUMENT_ROOT="/var/www/"
+export SERVER_NAME="example.com"
+perl -pi.orig -w -e 's!##(.+?)##!$ENV{$1}!ge;' example_config_file.txt
+```
