@@ -72,3 +72,13 @@ export DOCUMENT_ROOT="/var/www/"
 export SERVER_NAME="example.com"
 perl -pi.orig -w -e 's!##(.+?)##!$ENV{$1}!ge;' example_config_file.txt
 ```
+
+### Get the current time five minutes ago
+POSIX format
+```
+perl -MPOSIX=strftime -le 'print strftime("%Y-%m-%d %H:%M:%S", localtime(time()-5*60))'
+```
+EPOC format
+```
+date -d "$(perl -MPOSIX=strftime -le 'print strftime("%Y-%m-%d %H:%M:%S", localtime(time()-5*60))')" +%s
+```
